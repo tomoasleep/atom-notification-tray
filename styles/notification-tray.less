@@ -1,0 +1,40 @@
+.notification--tray--item {
+  margin: 0.25em;
+  border-radius: 0.25em;
+  overflow-wrap: break-word;
+
+  &.error {
+    background-color: lightpink;
+  }
+  &.fatal {
+    background-color: tomato;
+  }
+  &.success {
+    background-color: darkseagreen;
+  }
+  &.info {
+    background-color: darkturquoise;
+  }
+  &.warning {
+    background-color: moccasin;
+  }
+
+  .notification--tray--item__header {
+    padding: 0.5em;
+    position: relative;
+
+    .close-button {
+      position: absolute;
+      padding-top: 0.5em;
+      right: 0;
+      top: 0;
+      &:hover {
+
+      }
+    }
+  }
+
+  .notification--tray--item__detail {
+    padding: 0.5em;
+  }
+}

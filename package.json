@@ -1,0 +1,49 @@
+{
+  "name": "notification-tray",
+  "main": "./lib/index",
+  "version": "0.0.1",
+  "description": "Better Notification Center for Atom",
+  "repository": "https://github.com/tomoasleep/atom-notification-tray",
+  "license": "MIT",
+  "scripts": {
+    "test": "atom --test test",
+    "lint": "eslint --max-warnings 0 test lib"
+  },
+  "engines": {
+    "atom": "^1.0.0"
+  },
+  "atomTestRunner": "./test/runner",
+  "atomTranspilers": [
+    {
+      "glob": "{lib,test}/**/*.js",
+      "transpiler": "atom-babel6-transpiler"
+    }
+  ],
+  "dependencies": {
+    "atom-babel6-transpiler": "^1.1.1",
+    "atom-mocha-test-runner": "^1.0.1",
+    "autobind-decorator": "^1.4.1",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-display-name": "^6.25.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.0.0",
+    "preact": "^8.1.0",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "flow-bin": "^0.47.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "configSchema": {}
+}
